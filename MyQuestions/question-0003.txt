@@ -1,0 +1,11 @@
+El Problema:
+Dispones de medidas estructurales (como altura de paredes, área del techo e inclinación) para predecir cuánta carga térmica (energía) necesita un edificio para calentarse.
+
+Tu Misión:
+Escribe una función llamada evaluar_eficiencia_energetica(X, y) que:
+
+1. Reciba la matriz de características X y el vector objetivo y (como arrays de numpy).
+2. Divida los datos en conjuntos de entrenamiento (80%) y prueba (20%) utilizando train_test_split (usa random_state=42 para reproducibilidad).
+3. Escale las características utilizando StandardScaler. Debe ser ajustado (fit) solo con X_train, y transformar tanto X_train como X_test.
+4. Entrene un modelo KNeighborsRegressor con n_neighbors=5 sobre los datos de entrenamiento escalados.
+5. Devuelva el Error Absoluto Medio (Mean Absolute Error o MAE) de sklearn.metrics evaluando las predicciones del modelo sobre el conjunto de prueba.

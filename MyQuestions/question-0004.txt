@@ -1,0 +1,11 @@
+El Problema:
+Tienes atributos numéricos extraídos de correos electrónicos (ej. frecuencia de ciertas palabras clave, cantidad de mayúsculas, longitud del texto) y quieres detectar correos de spam basándote en ellos.
+
+Tu Misión:
+Escribe una función llamada clasificar_spam_metadata(X_train, y_train, X_test, y_test) que:
+
+1. Reciba los datos (arrays de numpy) ya divididos en entrenamiento y prueba.
+2. Escale todas las características utilizando MinMaxScaler (ajustando sobre X_train, y aplicando a X_train y X_test) para que los valores queden en el rango entre 0 y 1.
+3. Entrene un clasificador Naive Bayes Gaussiano (GaussianNB) de la librería sklearn.naive_bayes usando los datos de entrenamiento procesados.
+4. Evalúe el clasificador sobre el conjunto de prueba X_test procesado usando accuracy_score de sklearn.metrics.
+5. Retorne un número (float) correspondiente al puntaje de exactitud (accuracy) obtenido.

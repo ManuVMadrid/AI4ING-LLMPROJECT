@@ -1,0 +1,11 @@
+El Problema:
+Tienes dos conjuntos de datos de una heladería: uno con las ventas diarias y otro con los costos y precios por sabor. Necesitas calcular qué sabor generó más ganancia neta en los días calurosos.
+
+Tu Misión:
+Escribe una función llamada resumir_ganancias_helados(df_ventas, df_costos) que:
+
+1. Reciba df_ventas (con columnas: 'fecha', 'sabor', 'temperatura', 'unidades_vendidas') y df_costos (con columnas: 'sabor', 'costo_produccion', 'precio_venta').
+2. Combine (haga merge) ambos DataFrames cruzándolos por la columna 'sabor'.
+3. Filtre el resultado para quedarse solo con los días donde la 'temperatura' sea estrictamente mayor a 25.
+4. Calcule una nueva columna 'ganancia_neta' multiplicando las 'unidades_vendidas' por la diferencia entre 'precio_venta' y 'costo_produccion'.
+5. Agrupe por 'sabor', calcule la ganancia neta total de cada uno, y devuelva un pd.Series o DataFrame indexado por 'sabor', ordenado de mayor a menor ganancia neta.

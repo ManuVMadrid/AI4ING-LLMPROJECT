@@ -1,0 +1,11 @@
+El Problema:
+En un colegio se otorgan becas a los estudiantes con mejores notas ponderadas, pero algunos estudiantes faltaron a exámenes y tienen valores nulos.
+
+Tu Misión:
+Escribe una función llamada evaluar_becas_estudiantes(df_notas) que:
+
+1. Reciba un DataFrame con columnas ('id_estudiante', 'matematicas', 'ciencias', 'literatura').
+2. Reemplace cualquier valor nulo (NaN) en las calificaciones con un cero (0), ya que no rendir un examen equivale a 0.
+3. Calcule una nueva columna 'nota_final' aplicando las siguientes ponderaciones teóricas: Matemáticas 40%, Ciencias 40% y Literatura 20%.
+4. Filtre el DataFrame para conservar únicamente a los estudiantes cuya 'nota_final' sea mayor o igual a 80.
+5. Devuelva un DataFrame con las columnas 'id_estudiante' y 'nota_final' (redondeada a 2 decimales), ordenando las filas alfabéticamente por el 'id_estudiante'.
